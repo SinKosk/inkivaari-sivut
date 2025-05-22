@@ -313,6 +313,28 @@ body.third #section {  /*third välilehden tekstiosuus*/
   .content-area {
     display: block;
   }
+
+  .kuva-teksti-rivi {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.kuva-teksti-rivi img {
+  width: 80%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.kuva-teksti-rivi ul {
+  padding: 0;
+  margin: 0 auto;
+  list-style-position: inside;
+  text-align: left;
+  max-width: 90%;
+}
+
 }
 
 

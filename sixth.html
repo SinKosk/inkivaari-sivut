@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <title>Inkivääri</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<div class="content-area">
+
+<header id="header"> 
+  <div class="logo-ja-otsikko">
+    <img src="img.logo.jpg" alt="Inkivääri logo" class="logokuva">
+    <h1>Inkiväärin vieraskirja</h1>
+  </div>
+
+<div id="nav">
+  <a href="index.html">Etusivu</a> |
+  <a href="third.html">Tarinani</a> |
+  <a href="second.html">Seikkailujani</a> |
+  <a href="fourth.html">Muita touhuja</a> |
+  <a href="fifth.html">Lempparijuttuja</a> |
+  <a href="sixth.html" class="active">Vieraskirja</a>
+</div>
+</header>
+
+<div id="section">
+            <h2>Kirjoita terveisesi Inkiväärille!</h2>
+    <form class="vieraskirja-form">
+      <label for="nimi">Nimi:</label><br>
+      <input type="text" id="nimi" name="nimi" required><br><br>
+
+      <label for="viesti">Viesti:</label><br>
+      <textarea id="viesti" name="viesti" rows="5" required></textarea><br><br>
+
+      <button type="submit">Lähetä</button>
+    </form>
+    <p><em>Huom! Tämä lomake ei tallenna viestejä — se on vain esittelykäyttöön.</em></p>
+</div>
+
+</div>
+
+<footer id="footer">
+  <p>&copy; 2025 Inkivääri | Kaikki oikeudet pidätetään</p>
+</footer>
+
+</body>
+</html>

@@ -301,7 +301,7 @@ body.third #section {  /*third välilehden tekstiosuus*/
     display: block;
     flex-direction: column; /* Pakottaa kuvan ja listan pystysuuntaan */
     align-items: center;
-    text-align: center;
+    text-align: left;
   }
 
   .kuva-ja-teksti img {

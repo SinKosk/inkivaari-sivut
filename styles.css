@@ -321,49 +321,26 @@ body.third #section {  /*third välilehden tekstiosuus*/
   }
 }
 
-@media screen and (max-width: 600px) {
-   .sisältö {
-    display: flex;
-    flex-direction: column; /* Tekee elementeistä pystysuuntaisia mobiilissa */
-    align-items: center;
+@media screen and (max-width: 600px) { 
+  .sivu-navi { 
+    display: flex; 
+    flex-wrap: wrap; /* Sallii rivinvaihdon, jos tila loppuu */ 
+    justify-content: center; 
+    gap: 10px; /* Lisää väliä linkkien väliin */ } 
+
+  .sivu-navi a { 
+    flex: 1 1 auto; /* Linkit mukautuvat ruudun leveyteen */  
+    text-align: center; 
+   padding: 10px; 
+    min-width: 100px; /* Varmistaa, ettei linkit mene liian pieniksi */ 
   }
 
-  .side-nav {
-    width: 100%;
-    max-width: 200px; /* Rajoittaa navigaation leveyttä */
-    text-align: center;
-    margin-bottom: 20px;
-    position: relative; /* Estää tekstin menemästä navigaation päälle */
-    z-index: 10; /* Varmistaa, että navigaatio ei peitä tekstiä */
-  }
+  #section { 
+    width: 100%; 
+    margin-left: 0; 
+  } 
 
-  .side-nav ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 0;
-  }
-
-  .side-nav li {
-    list-style: none;
-    margin: 5px;
-  }
-
-  .side-nav a {
-    display: block;
-    padding: 10px;
-    background-color: #f4f4f4;
-    text-decoration: none;
-    border-radius: 5px;
-    min-width: 120px;
-  }
-
-
- #section {
-    width: 100%;
-    padding: 10px;
-    box-sizing: border-box;
-    margin-top: 20px;
-  }
+  .content-area { 
+    display: block; 
+  } 
 }
-

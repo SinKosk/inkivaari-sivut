@@ -294,6 +294,7 @@ body.third #section {  /*third välilehden tekstiosuus*/
   .kuva-teksti-rivi {
     display: grid;
     grid-template-rows: auto auto;
+    align-items: center;
     text-align: center;
     padding: 10px;
   }

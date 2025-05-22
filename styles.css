@@ -288,6 +288,8 @@ body.third #section {  /*third välilehden tekstiosuus*/
     width: 100%;
     box-sizing: border-box;
     white-space: normal;
+    flex-wrap: wrap; 
+    justify-content: center;  
   }
 
   #nav a {
@@ -299,12 +301,7 @@ body.third #section {  /*third välilehden tekstiosuus*/
     border-radius: 5px;
     box-sizing: border-box;
     display: inline;
-  }
-
-  #nav a:not(:last-child)::after {
-  content: "|";
-  color: black;
-  margin-left: 8px;
+    white-space: nowrap;
   }
 
   #nav a.active {

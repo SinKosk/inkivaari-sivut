@@ -335,6 +335,29 @@ body.third #section {  /*third välilehden tekstiosuus*/
   max-width: 90%;
 }
 
+/* Responsiivisuus kuva + teksti (etusivu) */
+.kuva-ja-teksti {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+}
+
+.kuva-ja-teksti img {
+  width: 80%;
+  height: auto;
+}
+
+.kuva-ja-teksti ul {
+  padding: 0;
+  list-style-position: inside;
+  text-align: left;
+  width: 90%;
+  margin: 0 auto;
+}
+
+
 }
 
 

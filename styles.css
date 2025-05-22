@@ -322,20 +322,44 @@ body.third #section {  /*third välilehden tekstiosuus*/
 }
 
 @media screen and (max-width: 600px) {
-  .sisältö {
-    display: block;
-    width: 100%;
-  }
-
   .side-nav {
-    display: block;
-    width: 100%;
+    width: 100%; /* Varmistaa, että navigaatio täyttää koko käytettävän tilan */
     text-align: center;
+    background-color: rgb(98, 190, 124);
+    padding: 15px;
     margin-bottom: 20px;
+    max-width: 100%;
   }
 
-  #section {
-    width: 100%;
+  .side-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .side-nav li {
+    list-style: none;
+    margin: 5px;
+  }
+
+  .side-nav a {
+    display: block;
     padding: 10px;
+    background-color: #f4f4f4;
+    text-decoration: none;
+    border-radius: 5px;
+    min-width: 120px;
   }
 }
+
+@media screen and (max-width: 600px) {
+  #section {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+    overflow: visible; /* Estää sisällön leikkaantumisen */
+  }
+}
+

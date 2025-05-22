@@ -306,28 +306,28 @@ body.third #section {  /*third välilehden tekstiosuus*/
     display: block;
     margin: 0 auto 15px auto;
   }
+  }
 
-.kuva-ja-teksti {
+@media screen and (max-width: 600px) {
+  .kuva-ja-teksti {
     display: flex;
-    flex-direction: column; /* Pakottaa kuvan ja listan pystysuoraan */
+    flex-direction: column; /* Pakottaa kuvan ja listan pystysuuntaan */
     align-items: center;
-}
+  }
 
-.kuva-ja-teksti img {
-  width: 80%;
-  height: auto;
-  display: block;
-  margin: 0 auto 15px auto;
-}
+  .kuva-ja-teksti img {
+    width: 80%;
+    height: auto;
+    display: block;
+    margin-bottom: 15px; /* Lisää tilaa kuvan ja listan väliin */
+  }
 
-.kuva-ja-teksti ul {
-    display: block; /* Poistetaan mahdollinen grid/flex-asettelu */
-    width: 100%; /* Varmistetaan, että lista ei mene viereen */
+  .kuva-ja-teksti ul {
+    width: 100%;
     max-width: 400px;
     text-align: left;
     margin: 0 auto;
-    clear: both; /* Poistetaan mahdolliset kelluvat elementit */
-}
+  }
 }
 
 

@@ -44,6 +44,7 @@ h2 {
 }
 
 #nav {
+    display: flex;
     background-color: rgb(98, 190, 124);
     padding: 20px;
     width: 100%;
@@ -51,14 +52,15 @@ h2 {
     white-space: normal;
     flex-wrap: wrap;
     justify-content: center;
+    box-sizing: border-box;
 }
 
 #nav a {
+    display: inline-block;
     margin: 0px;
     text-decoration: none;
     color: black;   
     white-space: nowrap; 
-    position: relative;
 }
 
 #nav a:hover {

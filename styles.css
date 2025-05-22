@@ -322,22 +322,28 @@ body.third #section {  /*third välilehden tekstiosuus*/
 }
 
 @media screen and (max-width: 600px) {
+  .sisältö {
+    display: flex;
+    flex-direction: row; /* Pakottaa navigaation ja tekstin vierekkäin */
+    align-items: flex-start;
+  }
+
   .sivu-navi {
-    display: block;
-    width: 30%; /* Asettaa navigaation tietylle leveydelle */
-    text-align: left; /* Pitää linkit siistinä */
-    float: left; /* Pakottaa navigaation tekstin viereen */
+    flex: 1; /* Varmistaa, että navigaatio vie osan tilasta muttei liikaa */
+    max-width: 30%; /* Pitää sen kapeana */
+    text-align: left;
     padding: 10px;
     box-sizing: border-box;
   }
 
   .sivu-navi ul {
-    display: block; /* Estää rivittäytymisongelmat */
+    display: block;
     padding: 0;
   }
 
   .sivu-navi li {
-    margin-bottom: 10px; /* Lisää tilaa linkkien väliin */
+    list-style: none;
+    margin-bottom: 10px;
   }
 
   .sivu-navi a {
@@ -349,8 +355,7 @@ body.third #section {  /*third välilehden tekstiosuus*/
   }
 
   #section {
-    width: 70%; /* Tekstiosion leveys mukautuu */
-    float: right; /* Pakottaa tekstin navigaation viereen */
+    flex: 3; /* Tekstialue vie suuremman osan tilasta */
     padding: 10px;
     box-sizing: border-box;
   }

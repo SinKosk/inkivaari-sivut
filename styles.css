@@ -307,7 +307,7 @@ body.third #section {  /*third välilehden tekstiosuus*/
   }
 
    .kuva-ja-teksti {
-    display: grid;
+    display: block;
     flex-direction: column;
     grid-template-rows: auto auto; /* Tekee listasta oman rivinsä */
     justify-content: center;
@@ -321,12 +321,13 @@ body.third #section {  /*third välilehden tekstiosuus*/
   }
 
     .kuva-ja-teksti ul {
+    display: block;
     width: 100%;
-    grid-row: 2;
     padding-left: 20px;
     text-align: left;    
     max-width: 400px;    
-    margin: 0 auto;      
+    margin: 0 auto;   
+    clear: both;   
   }
 }
 

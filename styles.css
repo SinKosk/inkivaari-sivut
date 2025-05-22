@@ -298,6 +298,13 @@ body.third #section {  /*third välilehden tekstiosuus*/
   .kuva-teksti-rivi img {
     width: 80%;
   }
+
+    .kuva-ja-teksti ul {
+    padding-left: 20px;
+    text-align: left;    
+    max-width: 400px;    
+    margin: 0 auto;      
+  }
 }
 
 @media screen and (max-width: 768px) {

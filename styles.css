@@ -321,26 +321,37 @@ body.third #section {  /*third välilehden tekstiosuus*/
   }
 }
 
-@media screen and (max-width: 600px) { 
-  .sivu-navi { 
-    display: flex; 
-    flex-wrap: wrap; /* Sallii rivinvaihdon, jos tila loppuu */ 
-    justify-content: center; 
-    gap: 10px; /* Lisää väliä linkkien väliin */ } 
-
-  .sivu-navi a { 
-    flex: 1 1 auto; /* Linkit mukautuvat ruudun leveyteen */  
-    text-align: center; 
-   padding: 10px; 
-    min-width: 100px; /* Varmistaa, ettei linkit mene liian pieniksi */ 
+@media screen and (max-width: 600px) {
+  .sivu-navi {
+    display: block;
+    width: 30%; /* Asettaa navigaation tietylle leveydelle */
+    text-align: left; /* Pitää linkit siistinä */
+    float: left; /* Pakottaa navigaation tekstin viereen */
+    padding: 10px;
+    box-sizing: border-box;
   }
 
-  #section { 
-    width: 100%; 
-    margin-left: 0; 
-  } 
+  .sivu-navi ul {
+    display: block; /* Estää rivittäytymisongelmat */
+    padding: 0;
+  }
 
-  .content-area { 
-    display: block; 
-  } 
+  .sivu-navi li {
+    margin-bottom: 10px; /* Lisää tilaa linkkien väliin */
+  }
+
+  .sivu-navi a {
+    display: block;
+    padding: 10px;
+    background-color: #f4f4f4;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+
+  #section {
+    width: 70%; /* Tekstiosion leveys mukautuu */
+    float: right; /* Pakottaa tekstin navigaation viereen */
+    padding: 10px;
+    box-sizing: border-box;
+  }
 }

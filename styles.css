@@ -305,56 +305,48 @@ body.third #section {  /*third välilehden tekstiosuus*/
     display: block;
     margin: 0 auto 15px auto;
   }
-
-   .kuva-ja-teksti {
-    display: block;
-    flex-direction: column;
-    grid-template-rows: auto auto; /* Tekee listasta oman rivinsä */
-    justify-content: center;
-  }
-
-  .kuva-ja-teksti img {
-    width: 80%;
-    height: auto;
-    display: block;
-    margin-bottom: 15px;
-  }
-
-    .kuva-ja-teksti ul {
-    display: block;
-    width: 100%;
-    padding-left: 20px;
-    text-align: left;    
-    max-width: 400px;    
-    margin: 0 auto;   
-    clear: both;   
-  }
 }
 
 @media screen and (max-width: 600px) {
-  .sivu-navi {
+  .side-nav {
     display: flex;
-    flex-wrap: wrap; /* Sallii rivinvaihdon, jos tila loppuu */
+    flex-direction: column;
+    align-items: center; /* Keskittää navigaation */
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px; /* Lisää tilaa ennen sisältöä */
+  }
+
+  .side-nav ul {
+    display: flex;
+    flex-wrap: wrap; /* Estää linkkien menemisen päällekkäin */
     justify-content: center;
-    gap: 10px; /* Lisää väliä linkkien väliin */
+    padding: 0;
   }
 
-  .sivu-navi a {
-    flex: 1 1 auto; /* Linkit mukautuvat ruudun leveyteen */
-    text-align: center;
+  .side-nav li {
+    list-style: none;
+    margin: 5px;
+  }
+
+  .side-nav a {
+    display: block;
     padding: 10px;
-    min-width: 100px; /* Varmistaa, ettei linkit mene liian pieniksi */
+    background-color: #f4f4f4; /* Värillinen tausta erottamaan */
+    text-decoration: none;
+    border-radius: 5px;
+    min-width: 120px; /* Estää linkkien kutistumisen liikaa */
   }
-
-}
 
   #section {
-    width: 100%;
-    margin-left: 0;
+    display: block;
+    margin-top: 20px; /* Varmistaa, että navigaatio pysyy sen yläpuolella */
   }
 
   .content-area {
-    display: block;
+    display: flex;
+    flex-direction: column; /* Muuttaa tekstin alle tulevaksi */
+    align-items: center;
   }
 }
 

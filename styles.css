@@ -293,8 +293,7 @@ body.third #section {  /*third välilehden tekstiosuus*/
   @media screen and (max-width: 600px) {
   .kuva-teksti-rivi {
     display: grid;
-    grid-template-rows: 1fr auto;
-    flex-direction: column;
+    grid-template-rows: auto auto;
     text-align: center;
     padding: 10px;
   }
@@ -306,7 +305,14 @@ body.third #section {  /*third välilehden tekstiosuus*/
     margin: 0 auto 15px auto;
   }
 
+   .kuva-ja-teksti {
+    display: grid;
+    grid-template-rows: auto auto; /* Tekee listasta oman rivinsä */
+    justify-content: center;
+  }
+
     .kuva-ja-teksti ul {
+    grid-row: 2;
     padding-left: 20px;
     text-align: left;    
     max-width: 400px;    

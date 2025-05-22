@@ -266,6 +266,7 @@ body.third #section {  /*third välilehden tekstiosuus*/
     padding: 10px;
     width: 100%;
     box-sizing: border-box;
+    white-space: normal;
   }
 
   #nav a {
@@ -276,7 +277,21 @@ body.third #section {  /*third välilehden tekstiosuus*/
     padding: 8px;
     border-radius: 5px;
     box-sizing: border-box;
+    display: inline;
   }
+
+  #nav a:not(:last-child)::after {
+  content: "|";
+  color: black;
+  margin-left: 8px;
+  }
+
+  #nav a.active {
+  color: rgb(214, 107, 7);
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
 
   .side-nav {
     width: 100%;
@@ -285,10 +300,9 @@ body.third #section {  /*third välilehden tekstiosuus*/
   }
 
   #section {
-    width: 100%;
-    margin-left: 0;
-    margin-top: 10px;
+    flex-direction: column;
   }
+
 
   .kuvagalleria-grid {
     display: flex;

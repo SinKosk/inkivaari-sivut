@@ -293,10 +293,14 @@ body.third #section {  /*third välilehden tekstiosuus*/
   .kuva-teksti-rivi {
     flex-direction: column;
     text-align: center;
+    padding: 10px;
   }
 
   .kuva-teksti-rivi img {
     width: 80%;
+    height: auto;
+    display: block;
+    margin: 0 auto 15px auto;
   }
 
     .kuva-ja-teksti ul {

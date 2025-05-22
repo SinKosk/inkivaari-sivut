@@ -292,7 +292,8 @@ body.third #section {  /*third välilehden tekstiosuus*/
   
   @media screen and (max-width: 600px) {
   .kuva-teksti-rivi {
-    display: grid;
+    display: flex;
+    flex-direction: column-reverse;
     flex-direction: column;
     text-align: center;
     padding: 10px;

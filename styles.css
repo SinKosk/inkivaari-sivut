@@ -292,6 +292,7 @@ body.third #section {  /*third välilehden tekstiosuus*/
   
   @media screen and (max-width: 600px) {
   .kuva-teksti-rivi {
+    display: grid;
     flex-direction: column;
     text-align: center;
     padding: 10px;
@@ -303,28 +304,6 @@ body.third #section {  /*third välilehden tekstiosuus*/
     display: block;
     margin: 0 auto 15px auto;
   }
-
-  @media (max-width: 768px) {
-  .kuva-ja-teksti {
-    /* Ei display: flex, jotta ei vaikuta muihin elementteihin */
-    text-align: center;
-    padding: 10px;
-  }
-
-  .kuva-ja-teksti img {
-    width: 80%;
-    height: auto;
-    display: block;
-    margin: 0 auto 15px auto; /* keskittää kuva ja lisää alareunaan tilaa */
-  }
-
-  .kuva-ja-teksti ul {
-    padding-left: 20px;
-    text-align: left;    
-    max-width: 400px;    
-    margin: 0 auto;      
-  }
-
 
     .kuva-ja-teksti ul {
     padding-left: 20px;

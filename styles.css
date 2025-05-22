@@ -249,35 +249,44 @@ body.third #section {  /*third välilehden tekstiosuus*/
 
 
 
-/* Responsiivisuus: mobiililaitteilla (puhelimet ja pienet tabletit) */
+/* Yleinen mobiilityyli kaikille laitteille max 768px */
 @media (max-width: 768px) {
-
-  /* Otsikko: logo ja teksti allekkain */
   .logo-ja-otsikko {
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
 
-  /* Navigaation tyyliä mobiilissa */
   #nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     font-size: 16px;
+    gap: 10px;
     padding: 10px;
   }
 
-  /* Sivunavigointi koko leveyteen */
+  #nav a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background-color: #eee;
+    padding: 8px;
+    border-radius: 5px;
+  }
+
   .side-nav {
     width: 100%;
-    margin-top: 10px;
+    float: none;
+    margin-bottom: 20px;
   }
 
-  /* Tekstiosio koko leveyteen */
   #section {
     width: 100%;
+    margin-left: 0;
     margin-top: 10px;
   }
 
-  /* Kuvagalleria responsiiviseksi */
   .kuvagalleria-grid {
     display: flex;
     flex-direction: column;
@@ -289,27 +298,16 @@ body.third #section {  /*third välilehden tekstiosuus*/
     height: auto;
   }
 
-  @media screen and (max-width: 600px) {
   .kuva-teksti-rivi {
+    display: flex;
     flex-direction: column;
     text-align: center;
+    align-items: center;
   }
 
   .kuva-teksti-rivi img {
     width: 80%;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .side-nav {
-    width: 100%;
-    float: none;
-    margin-bottom: 20px;
-  }
-
-  #section {
-    width: 100%;
-    margin-left: 0;
+    height: auto;
   }
 
   .content-area {
@@ -317,8 +315,6 @@ body.third #section {  /*third välilehden tekstiosuus*/
   }
 }
 
-
-}
 
 
 

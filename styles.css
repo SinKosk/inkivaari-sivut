@@ -321,54 +321,21 @@ body.third #section {  /*third välilehden tekstiosuus*/
   }
 }
 
-
-
 @media screen and (max-width: 600px) {
-  body.third .side-nav {
-    display: block; /* Poistaa flexboxin mahdolliset ongelmat */
+  .sisältö {
+    display: block;
+    width: 100%;
+  }
+
+  .side-nav {
+    display: block;
     width: 100%;
     text-align: center;
-    margin-bottom: 20px; /* Lisää tilaa ennen sisältöä */
-  }
-
-  body.third .side-nav ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 0;
-  }
-
-  body.third .side-nav li {
-    list-style: none;
-    margin: 5px;
-  }
-
-  body.third .side-nav a {
-    display: block;
-    padding: 0;
-    background-color:rgb(98, 190, 124);
-    text-decoration: none;
-    border-radius: 5px;
-    min-width: 120px;
-  }
-
-  .sisältö {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    overflow: visible; /* Varmistaa, että teksti ei katkea */
+    margin-bottom: 20px;
   }
 
   #section {
     width: 100%;
-    max-width: 90vw; /* Estää liian pienen tekstialueen */
     padding: 10px;
-  }
-
-  .content-area {
-    display: block;
-    width: 100%;
-    overflow: visible; /* Estää tekstin leikkaantumisen */
   }
 }

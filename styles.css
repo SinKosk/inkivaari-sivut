@@ -249,44 +249,35 @@ body.third #section {  /*third välilehden tekstiosuus*/
 
 
 
-/* Yleinen mobiilityyli kaikille laitteille max 768px */
+/* Responsiivisuus: mobiililaitteilla (puhelimet ja pienet tabletit) */
 @media (max-width: 768px) {
+
+  /* Otsikko: logo ja teksti allekkain */
   .logo-ja-otsikko {
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
 
+  /* Navigaation tyyliä mobiilissa */
   #nav {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     font-size: 16px;
-    gap: 10px;
     padding: 10px;
   }
 
-  #nav a {
-    display: block;
-    width: 100%;
-    text-align: center;
-    background-color: #eee;
-    padding: 8px;
-    border-radius: 5px;
-  }
-
+  /* Sivunavigointi koko leveyteen */
   .side-nav {
     width: 100%;
-    float: none;
-    margin-bottom: 20px;
-  }
-
-  #section {
-    width: 100%;
-    margin-left: 0;
     margin-top: 10px;
   }
 
+  /* Tekstiosio koko leveyteen */
+  #section {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  /* Kuvagalleria responsiiviseksi */
   .kuvagalleria-grid {
     display: flex;
     flex-direction: column;
@@ -298,66 +289,33 @@ body.third #section {  /*third välilehden tekstiosuus*/
     height: auto;
   }
 
+  @media screen and (max-width: 600px) {
   .kuva-teksti-rivi {
-    display: flex;
     flex-direction: column;
     text-align: center;
-    align-items: center;
   }
 
   .kuva-teksti-rivi img {
     width: 80%;
-    height: auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .side-nav {
+    width: 100%;
+    float: none;
+    margin-bottom: 20px;
+  }
+}
+
+  #section {
+    width: 100%;
+    margin-left: 0;
   }
 
   .content-area {
     display: block;
   }
-
-  .kuva-teksti-rivi {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.kuva-teksti-rivi img {
-  width: 80%;
-  height: auto;
-  margin-bottom: 10px;
-}
-
-.kuva-teksti-rivi ul {
-  padding: 0;
-  margin: 0 auto;
-  list-style-position: inside;
-  text-align: left;
-  max-width: 90%;
-}
-
-/* Responsiivisuus kuva + teksti (etusivu) */
-.kuva-ja-teksti {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 10px;
-}
-
-.kuva-ja-teksti img {
-  width: 80%;
-  height: auto;
-}
-
-.kuva-ja-teksti ul {
-  padding: 0;
-  list-style-position: inside;
-  text-align: left;
-  width: 90%;
-  margin: 0 auto;
-}
-
-
 }
 
 

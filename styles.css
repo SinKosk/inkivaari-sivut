@@ -288,6 +288,7 @@ body.third #section {  /*third välilehden tekstiosuus*/
     width: 100%;
     height: auto;
   }
+}
 
   
   @media screen and (max-width: 600px) {
@@ -349,15 +350,3 @@ body.third #section {  /*third välilehden tekstiosuus*/
     align-items: center;
   }
 }
-
-
-
-
-
-
-
-
-  
-  
-
-  

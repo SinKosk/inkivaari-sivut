@@ -344,6 +344,7 @@ body.third #section {  /*third välilehden tekstiosuus*/
     margin-top: 20px; /* Varmistaa, että navigaatio pysyy sen yläpuolella */
   }
 
+
   .content-area {
     display: flex;
     flex-direction: column; /* Muuttaa tekstin alle tulevaksi */

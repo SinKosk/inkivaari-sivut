@@ -336,16 +336,22 @@ body.third #section {  /*third välilehden tekstiosuus*/
 
 
 @media screen and (max-width: 600px) {
- .side-nav {
-    display: flex; /* Pakottaa sen näkymään */
-    flex-direction: column;
+  .section {
+    display: flex;
+    flex-direction: column; /* Pakottaa elementit pystysuunnassa */
     align-items: center;
+  }
+
+  .side-nav {
+    display: block; /* Poistaa flexboxin mahdolliset ongelmat */
     width: 100%;
-}
+    text-align: center;
+    margin-bottom: 20px; /* Lisää tilaa ennen sisältöä */
+  }
 
   .side-nav ul {
     display: flex;
-    flex-wrap: wrap; /* Estää linkkien menemisen päällekkäin */
+    flex-wrap: wrap;
     justify-content: center;
     padding: 0;
   }
@@ -358,17 +364,17 @@ body.third #section {  /*third välilehden tekstiosuus*/
   .side-nav a {
     display: block;
     padding: 10px;
-    background-color: #f4f4f4; /* Värillinen tausta erottamaan */
+    background-color: #f4f4f4;
     text-decoration: none;
     border-radius: 5px;
-    min-width: 120px; /* Estää linkkien kutistumisen liikaa */
+    min-width: 120px;
   }
 
   #section {
     display: block;
-    margin-top: 20px; /* Varmistaa, että navigaatio pysyy sen yläpuolella */
+    width: 100%;
+    margin-top: 20px;
   }
-
 
   .content-area {
     display: flex;

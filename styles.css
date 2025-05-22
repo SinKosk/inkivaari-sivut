@@ -48,12 +48,17 @@ h2 {
     padding: 20px;
     width: 100%;
     text-align: center;
+    white-space: normal;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 #nav a {
     margin: 0px;
     text-decoration: none;
     color: black;   
+    white-space: nowrap; 
+    position: relative;
 }
 
 #nav a:hover {
@@ -66,6 +71,15 @@ h2 {
     padding: 5px 10px;
     border-radius: 10px;
   }
+
+#nav a:not(:last-child)::after {
+  content: "|";
+  position: absolute;
+  right: -10px;
+  color: black;
+  top: 50%;
+  transform: translateY(-50%);
+}
 
 .content-area {
     width: 100%;
@@ -256,6 +270,13 @@ body.third #section {  /*third välilehden tekstiosuus*/
     align-items: center;
     text-align: center;
   }
+}
+
+  @media (max-width: 350px) {
+  #nav a:not(:last-child)::after {
+    right: -6px;
+  }
+}
 
   #nav {
     display: flex;

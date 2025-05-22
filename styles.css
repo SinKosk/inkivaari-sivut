@@ -313,12 +313,13 @@ body.third #section {  /*third välilehden tekstiosuus*/
     align-items: center;
 }
 
-.teksti-ja-kuva ul {
-    width: 100%;
+.kuva-ja-teksti ul {
+    display: block; /* Poistetaan mahdollinen grid/flex-asettelu */
+    width: 100%; /* Varmistetaan, että lista ei mene viereen */
     max-width: 400px;
     text-align: left;
     margin: 0 auto;
-    clear: both; /* Estää kelluvat elementit piilottamasta listaa */
+    clear: both; /* Poistetaan mahdolliset kelluvat elementit */
 }
 }
 
